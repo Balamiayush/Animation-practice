@@ -9,9 +9,9 @@ const CircularMotion = () => {
       <LayoutWrapper>
         <div className="">
           <BlurText baseRotation={0} scrollContainerRef={scrollContainerRef}>
-            When does a man die? When he is hit by a bullet? No! When he suffers
-            a disease? No! When he ate a soup made out of a poisonous mushroom?
-            No! A man dies when he is forgotten!
+            Prixa is the Intelligent leyer <br />
+            that optimize processes, reduces costs<br />
+            and enhances productivity.
           </BlurText>
         </div>
       </LayoutWrapper>

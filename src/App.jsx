@@ -15,12 +15,12 @@ const App = () => {
   return (
     <main className="w-full relative bg-[#101010]">
     <HeroSection />
-    <Works/>
-    <OurLife/>
+    {/* <Works/> */}
+     <OurLife/>
     <MajorServices/>
     <KeyClients/>
     <CircularMotion/>
-    <div className="page2 w-full h-screen"></div>
+    <div className="page2 w-full h-screen"></div> 
     </main>
   );
 };

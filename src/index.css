@@ -5,3 +5,22 @@
       color: whitesmoke
 }
 @import "tailwindcss";
+
+
+
+
+.text {
+  fill: whitesmoke;
+  font-size: 24px;
+}
+.dot {
+  transition: all 0.3s ease;
+  transform-origin: center;
+  transform-box: fill-box; /* Crucial for SVG scaling */
+}
+
+.text:hover ~ .dot {
+  fill: red;
+  fill-opacity: 1;
+  transform: scale(1.5);
+}
