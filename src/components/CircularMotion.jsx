@@ -1,22 +1,32 @@
-import React, { useRef } from "react";
-import LayoutWrapper from "../utils/LayoutWrapper";
+import { useState } from "react";
 import BlurText from "./Animation/Blurtext";
+import Circlesvg from "../assets/icon/Circlesvg";
 
-const CircularMotion = () => {
-  const scrollContainerRef = useRef(null);
-  return (
-    <section className="w-full h-screen bg-[#101010] flex items-center justify-center ">
-      <LayoutWrapper>
-        <div className="">
-          <BlurText baseRotation={0} scrollContainerRef={scrollContainerRef}>
-            Prixa is the Intelligent leyer <br />
-            that optimize processes, reduces costs<br />
-            and enhances productivity.
-          </BlurText>
-        </div>
-      </LayoutWrapper>
-    </section>
-  );
+const highlightMap = {
+  "high-level": [3, 4],
+  "visionary": [8, 9],
+  "operational": [0],
+  "granular": [11, 12]
 };
 
-export default CircularMotion;
+export default function CircularMotion() {
+  const [activeLabel, setActiveLabel] = useState(null);
+
+  return (
+    <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      
+      <Circlesvg
+        onHover={setActiveLabel}
+        className="absolute w-[120%]"
+      />
+
+      <BlurText
+        text="Prixa is the Intelligent leyer that optimize processes, reduces costs and enhances productivity."
+        highlightMap={highlightMap}
+        activeLabel={activeLabel}
+        enableScroll={true}
+        className="w-1/3"
+      />
+    </div>
+  );
+}
